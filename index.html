@@ -15,20 +15,25 @@
     <h1>RedFire OS Update</h1>
     <p>Welcome to the RedFire OS update website!</p>
 
+    <iframe src="https://redfiremrt84.github.io/redfireos_update/" frameborder="0"></iframe>
+
     <script>
         // Assuming you have a variable or file indicating the current version
         var currentVersion = "1.0.0";
 
         // Function to check for updates
         function checkForUpdates() {
-            // Make an API request or fetch a JSON/XML file from the server
-            // Parse the response and extract the latest version and other update details
-
+            // Assuming you have a way to retrieve the latest version from the server
             var latestVersion = "1.2.0"; // Example: Latest version retrieved from the server
+
+            // Assuming you have a way to determine if an update is available
             var updateAvailable = true; // Example: Flag indicating if an update is available
+
+            // Assuming you have a way to provide an error code for the update
             var errorCode = "XXXXXX"; // Example: Error code for the update
 
             if (updateAvailable) {
+                // Call the displayAlert function with the appropriate messages
                 displayAlert("A new version of the RedFire OS is available (Version " + latestVersion + ").\n\nDownload the software by visiting the RedFire website.\n\nError Code: " + errorCode, "");
             } else {
                 removeAlert();
@@ -59,7 +64,13 @@
         }
 
         // Call the update checking function at startup or specific intervals
-        // Do not call the checkForUpdates function here to prevent the alert from showing initially
+        checkForUpdates();
+
+        // Initialize Wii notifications (assuming you have a separate script for that)
+        initWiiNotifications();
+
+        // Initialize loader or other necessary functions (assuming you have a separate script for that)
+        initLoader();
     </script>
 </body>
 </html>
