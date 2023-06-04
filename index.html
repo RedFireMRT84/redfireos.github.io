@@ -16,19 +16,6 @@
     <p>Welcome to the RedFire OS update website!</p>
 
     <script>
-        function checkForUpdates() {
-            // Make an API request or fetch a JSON/XML file from the server
-            // Parse the response and extract the latest version and other update details
-
-            var latestVersion = "1.2.0"; // Example: Latest version retrieved from the server
-            var updateAvailable = true; // Example: Flag indicating if an update is available
-            var errorCode = "XXXXXX"; // Example: Error code for the update
-
-            if (updateAvailable) {
-                displayAlert("A new version of the RedFire OS is available (Version " + latestVersion + ").\n\nDownload the software by visiting the RedFire website.\n\nError Code: " + errorCode, "");
-            }
-        }
-
         function displayAlert(message1, message2) {
             // Add your displayAlert code here
             // Call the ActionScript function or perform any necessary interactions
@@ -37,8 +24,16 @@
             }
         }
 
+        function removeAlert() {
+            // Add your removeAlert code here
+            // Call the ActionScript function or perform any necessary interactions
+            if (typeof window["removeAlertAS"] === "function") {
+                window["removeAlertAS"]();
+            }
+        }
+
         // Call the update checking function at startup or specific intervals
-        checkForUpdates();
+        // Do not call the checkForUpdates function here to prevent the alert from showing initially
     </script>
 </body>
 </html>
