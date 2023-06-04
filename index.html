@@ -18,59 +18,47 @@
     <iframe src="https://redfiremrt84.github.io/redfireos_update/" frameborder="0"></iframe>
 
     <script>
-        // Assuming you have a variable or file indicating the current version
-        var currentVersion = "1.0.0";
+    // Assuming you have a variable or file indicating the current version
+    var currentVersion = "1.0.0";
 
-        // Function to check for updates
-        function checkForUpdates() {
-            // Assuming you have a way to retrieve the latest version from the server
-            var latestVersion = "1.2.0"; // Example: Latest version retrieved from the server
+    // Function to check for updates
+    function checkForUpdates() {
+        // Assuming you have a way to retrieve the latest version from the server
+        var latestVersion = "1.2.0"; // Example: Latest version retrieved from the server
 
-            // Assuming you have a way to determine if an update is available
-            var updateAvailable = true; // Example: Flag indicating if an update is available
+        // Assuming you have a way to determine if an update is available
+        var updateAvailable = true; // Example: Flag indicating if an update is available
 
-            // Assuming you have a way to provide an error code for the update
-            var errorCode = "XXXXXX"; // Example: Error code for the update
+        // Assuming you have a way to provide an error code for the update
+        var errorCode = "XXXXXX"; // Example: Error code for the update
 
-            if (updateAvailable) {
-                // Call the displayAlert function with the appropriate messages
-                displayAlert("A new version of the RedFire OS is available (Version " + latestVersion + ").\n\nDownload the software by visiting the RedFire website.\n\nError Code: " + errorCode, "");
-            } else {
-                removeAlert();
-            }
+        if (updateAvailable) {
+            // Call the displayAlert function with the appropriate messages
+            displayAlert("A new version of the RedFire OS is available (Version " + latestVersion + ").\n\nDownload the software by visiting the RedFire website.\n\nError Code: " + errorCode, "");
+        } else {
+            removeAlert();
         }
+    }
 
-        function displayAlert(message1, message2) {
-            // Add your displayAlert code here
-            // Call the ActionScript function or perform any necessary interactions
-            if (typeof window["displayAlertAS"] === "function") {
-                window["displayAlertAS"](message1, message2);
-            } else {
-                // If the ActionScript function is not available, show a fallback alert
-                alert(message1 + "\n\n" + message2);
-            }
+    function displayAlert(message1, message2) {
+        // Add your displayAlert code here
+        // Call the ActionScript function or perform any necessary interactions
+        if (typeof window["displayAlertAS"] === "function") {
+            window["displayAlertAS"](message1, message2);
+        } else {
+            // If the ActionScript function is not available, show a fallback alert
+            alert(message1 + "\n\n" + message2);
         }
+    }
 
-        function removeAlert() {
-            // Add your removeAlert code here
-            // Call the ActionScript function or perform any necessary interactions
-            if (typeof window["removeAlertAS"] === "function") {
-                window["removeAlertAS"]();
-            } else {
-                // If the ActionScript function is not available, show a fallback message
-                console.log("Removing alert in JavaScript");
-                // Code to hide the alert goes here
-            }
-        }
-
-        // Call the update checking function at startup or specific intervals
-        checkForUpdates();
-
-        // Initialize Wii notifications (assuming you have a separate script for that)
-        initWiiNotifications();
-
-        // Initialize loader or other necessary functions (assuming you have a separate script for that)
-        initLoader();
-    </script>
-</body>
-</html>
+    function removeAlert() {
+        // Add your removeAlert code here
+        // Call the ActionScript function or perform any necessary interactions
+        if (typeof window["removeAlertAS"] === "function") {
+            window["removeAlertAS"]();
+        } else {
+            // If the ActionScript function is not available, do nothing or show a fallback message.
+}
+// Call the checkForUpdates function to initiate the update check
+checkForUpdates();
+</script>
