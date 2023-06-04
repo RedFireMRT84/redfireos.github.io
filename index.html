@@ -57,5 +57,26 @@
         // Call the update checking function at startup or specific intervals
         // Do not call the checkForUpdates function here to prevent the alert from showing initially
     </script>
+
+    <object width="854" height="480">
+        <param name="movie" value="trusted/os_menu.swf">
+        <embed src="trusted/os_menu.swf" width="854" height="480">
+    </object>
+
+    <script>
+        function displayAlertJS(message, title) {
+            // Implement your code to display an alert with the provided message and title
+            // You can use a library or custom code to display a styled alert message
+            alert(title + "\n\n" + message);
+        }
+
+        function removeAlertJS() {
+            // Implement your code to remove the currently displayed alert, if any
+            // You can use a library or custom code to hide the alert message
+        }
+
+        // Call the update checking function at startup or specific intervals
+        checkForUpdates();
+    </script>
 </body>
 </html>
